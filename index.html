@@ -250,7 +250,7 @@
 
   <section class="grid-2">
     <div class="card" id="bellSection">
-      <h2><span class="tag" style="background:var(--teal)"></span>Taburan Masa Menunggu (Keseluruhan) — Lengkung Bell</h2>
+      <h2><span class="tag" style="background:var(--teal)"></span>Taburan Masa Menunggu (Keseluruhan) </h2>
       <div class="bell-layout">
         <div class="bell-stats" id="bellStats"></div>
         <div>
@@ -453,7 +453,7 @@ function renderStatCards(data){
     { icon:'✅', bg:'#E7F7EE', label:'Kadar Data Lengkap', value:`${s.completionPct ?? '–'}`, sub:`${s.recordedTotal ?? '–'} daripada ${s.patientTotal ?? '–'}` },
     { icon:'⏱️', bg:'#FFF1E0', label:'Purata Masa Menunggu', value:`${s.overallAvg ?? '–'}`, sub:'Mean' },
     { icon:'📊', bg:'#F1EBFF', label:'Median Masa Menunggu', value:`${s.overallMedian ?? '–'}`, sub:'Median' },
-    { icon:'∑', bg:'#E5F4FE', label:'Sisihan Piawai (SD)', value:`${s.overallSD ?? '–'}`, sub:'Standard deviation' },
+    { icon:'∑', bg:'#E5F4FE', label:'(SD)', value:`${s.overallSD ?? '–'}`, sub:'Standard deviation' },
   ];
   document.getElementById('statCards').innerHTML = cards.map(c => `
     <div class="stat-card">
@@ -534,7 +534,7 @@ function renderBell(data){
   document.getElementById('bellStats').innerHTML = `
     <div class="row"><div class="k">Purata (Mean)</div><div class="v">${s.overallAvg ?? '–'}</div></div>
     <div class="row"><div class="k">Median</div><div class="v">${s.overallMedian ?? '–'}</div></div>
-    <div class="row"><div class="k">Sisihan Piawai</div><div class="v">${s.overallSD ?? '–'}</div></div>
+    <div class="row"><div class="k">SD</div><div class="v">${s.overallSD ?? '–'}</div></div>
     <div class="row"><div class="k">Minimum</div><div class="v">${s.overallMin ?? '–'}</div></div>
     <div class="row"><div class="k">Maksimum</div><div class="v">${s.overallMax ?? '–'}</div></div>
   `;
